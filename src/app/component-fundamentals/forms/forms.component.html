@@ -1,0 +1,40 @@
+<!-- <p>forms works!</p> -->
+
+<!-- 
+<label for="name">Name: </label>
+<input id="name" type="text" [formControl]="name"> -->
+
+<div class="formcustomstyle">
+    <form #login="ngForm" (ngSubmit)="onSubmit(login.value)">
+        <div class="form-group">
+            <label>UserName</label>
+            <input [(ngModel)]="name" class="form-control" name="username" #username="ngModel" required>
+        </div>
+        <div [hidden]="username.valid || username.pristine" class="alert alert-danger">
+            User Name is required
+        </div>
+
+        <div class="form-group">
+            <label>Password</label>
+            <input [(ngModel)]="password" class="form-control" name="password" #password12="ngModel" required >
+        </div>
+        <div [hidden]="password12.valid || password12.pristine">Password is required</div>
+
+        <div>
+            <button [disabled]="!login.valid" class="buttonstyle">Submit</button>
+            <button (click)="login.reset()">Reset</button>
+        </div>
+    </form>
+
+</div>
+<p>UserName : {{username.value}}</p>
+
+<p>Form json : {{login.value | json}}</p>
+
+
+<!-- ng-touched    -  ng-untouched
+
+ng-dirty - when user changes the value of the form field
+ng-pristine - when user has not chnaged  the form
+
+ng-valid   ng-invalid -->

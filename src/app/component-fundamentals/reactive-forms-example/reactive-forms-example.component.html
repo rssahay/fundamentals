@@ -1,0 +1,90 @@
+<p>reactive-forms-example works!</p>
+
+<div>
+    <!-- <form>
+        <div class="form-group">
+            <label>UserName</label>
+            <input class="form-control" name="username" [formControl]="username" required>
+        </div>
+        <div [hidden]="username.valid || username.pristine" class="alert alert-danger">
+            User Name is required
+        </div>
+
+        <button (click)="SubmitForm()" style="margin: 10px;">Submit</button>
+        <button (click)="updateForm()"> Update </button>
+    </form> -->
+
+
+    <table style="border: 1px solid black;">
+        <tr>
+            <th>course</th>
+            <th>COllage</th>
+            <th>University</th>
+            <th>Duration</th>
+            <th>Location</th>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let item of courseDetails">
+            <td>{{ item.course}}</td>
+            <td>{{ item.Collage}}</td>
+            <td>{{ item.University}}</td>
+            <td>{{ item.Duration}}</td>
+            <td> {{ item.Location}}</td>
+            <td>{{ item.Name}}</td>
+            <td  ><button (click)="updateEductionDetails(item)"> Edit</button></td>
+        </tr>
+    </table>
+
+    <div>
+
+    Education Details
+    <form [formGroup]="educationDetails">
+        <div>
+            <label for="course">Course</label>
+            <input class="form-control" name="course" formControlName="course" >
+        </div>
+        <div>
+            <label for="Collage">Collage</label>
+            <input class="form-control" name="Collage" formControlName="Collage" >
+        </div>
+        <div>
+            <label for="University">University</label>
+            <input class="form-control" name="University" formControlName="University" >
+        </div>
+        <div>
+            <label for="Duration">Duration</label>
+            <input class="form-control" name="Duration" formControlName="Duration"  >
+        </div>
+        <!-- <div [hidden]="educationDetails.controls['Duration'].invalid && (educationDetails.controls['Duration'].dirty || educationDetails.controls['Duration'].touched || educationDetails.controls['Duration'].pristine)" class="alert alert-danger">
+            Duration is required
+            
+        </div>
+        <div *ngIf="educationDetails.controls['Duration']?.hasError('maxLength')">
+            Duration must be at least 1 characters long.
+          </div>
+         -->
+        
+        
+        <button (click)="submitEductionDetails()">Submit</button>
+
+    </form>
+
+    Personal Details
+    <div>
+        <form [formGroup]="personaledetails">
+            <div>
+                <label for="Name">Name</label>
+                <input class="form-control" name="Name" formControlName="Name" >
+            </div>
+            <div>
+                <label for="Location">Location</label>
+                <input class="form-control" name="Location" formControlName="Location"  >
+            </div>
+
+        </form>
+    </div>
+</div>
+
+</div>
+

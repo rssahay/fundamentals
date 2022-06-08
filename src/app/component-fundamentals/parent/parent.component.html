@@ -1,0 +1,25 @@
+<p>parent works!</p>
+
+
+<app-child [item] ='itemdetails'  (childevent)="listentochild($event)"></app-child>
+
+<br>
+{{parentmessage | lowercase}} 
+
+<br>
+{{totalcost| currency:'EUR' }}
+
+<br>
+{{birthday | date:'fullDate'}}
+<!-- <br>
+{{totalcost| currency:'INR' }}
+
+Inbuilt pipes - 
+1)DatePipe
+2)Uppercase pipe
+3)lowercasepipe
+4)Decimalpipe
+5)CurrencyPipe
+6)PercentPipe
+
+-->

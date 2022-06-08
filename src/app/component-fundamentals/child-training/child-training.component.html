@@ -1,0 +1,37 @@
+<p>child-training works!</p>
+
+<div > Message coming form Parent {{messagefromParent}}</div>
+
+<div [ngStyle]="myStyle" > Angular Directive tutorial  </div>
+
+
+<table>
+    <tr>
+      <th>SR No</th>
+        <th appMyhighlighter>Firstname</th>
+        <th>Lastname</th>
+        <th>Addres</th>
+        <th>mobile number</th>
+    </tr>
+
+    <tr   *ngFor="let item of studentDetails; index as i ">
+      <td>{{i + 1}}</td>
+      <td >{{item.Firstname | uppercase}}</td>
+      <td>{{item.lastname}}</td>
+      <td>{{item.address}}</td>
+      <td>{{item.mobilenumber | currency:'INR'}}</td>
+    </tr>
+</table>
+
+<!-- <input type="text"  #Usermessage placeholder="Enter Message"> -->
+<button (click)="passDataToParent()">Pass Data</button>
+
+<div>
+  <h2>Pick a highlight color</h2>
+<div>
+  <input type="radio" name="colors" (click)="color='lightgreen'">Green
+  <input type="radio" name="colors" (click)="color='yellow'">Yellow
+  <input type="radio" name="colors" (click)="color='cyan'">Cyan
+</div>
+<p [appHiglight]="color">Highlight me!</p>
+</div>
