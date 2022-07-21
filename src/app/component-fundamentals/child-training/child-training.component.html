@@ -1,11 +1,19 @@
+
+<div  >
+
 <p>child-training works!</p>
 
-<div > Message coming form Parent {{messagefromParent}}</div>
-
-<div [ngStyle]="myStyle" > Angular Directive tutorial  </div>
+<div > Message coming form Parent {{childlisten}}</div>
 
 
-<table>
+<button (click)="passDataToParent()">Pass Data</button>
+
+</div>
+<!-- 
+<div [ngStyle]="myStyle" > Angular Directive tutorial  </div> -->
+
+
+<!-- <table>
     <tr>
       <th>SR No</th>
         <th appMyhighlighter>Firstname</th>
@@ -21,10 +29,10 @@
       <td>{{item.address}}</td>
       <td>{{item.mobilenumber | currency:'INR'}}</td>
     </tr>
-</table>
+</table> -->
 
 <!-- <input type="text"  #Usermessage placeholder="Enter Message"> -->
-<button (click)="passDataToParent()">Pass Data</button>
+
 
 <div>
   <h2>Pick a highlight color</h2>
@@ -33,5 +41,6 @@
   <input type="radio" name="colors" (click)="color='yellow'">Yellow
   <input type="radio" name="colors" (click)="color='cyan'">Cyan
 </div>
-<p [appHiglight]="color">Highlight me!</p>
+
+<p appHiglight>Highlight me!</p>
 </div>

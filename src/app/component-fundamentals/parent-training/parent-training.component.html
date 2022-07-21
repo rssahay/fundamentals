@@ -1,9 +1,12 @@
-<p appMyhighlighter>parent-training works!</p>
+
+<div style="background-color: aquamarine;">
+<p >parent-training works!</p>
 
 {{displaymessage}}
 
 
-<app-child-training  [messagefromParent] = 'messagefromParent' 
+<app-child-training  [childlisten] = 'parentmessage' 
  [studentDetails]='Objectname' (childmessageEvent) ="listenTochild($event)"></app-child-training>
 <br>
 
+</div>

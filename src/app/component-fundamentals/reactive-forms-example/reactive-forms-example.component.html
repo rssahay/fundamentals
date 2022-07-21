@@ -1,18 +1,18 @@
 <p>reactive-forms-example works!</p>
 
 <div>
-    <!-- <form>
+    <form>
         <div class="form-group">
             <label>UserName</label>
             <input class="form-control" name="username" [formControl]="username" required>
         </div>
-        <div [hidden]="username.valid || username.pristine" class="alert alert-danger">
+        <!-- <div [hidden]="username.valid || username.pristine" class="alert alert-danger">
             User Name is required
-        </div>
+        </div> -->
 
         <button (click)="SubmitForm()" style="margin: 10px;">Submit</button>
         <button (click)="updateForm()"> Update </button>
-    </form> -->
+    </form>
 
 
     <table style="border: 1px solid black;">
@@ -32,7 +32,8 @@
             <td>{{ item.Duration}}</td>
             <td> {{ item.Location}}</td>
             <td>{{ item.Name}}</td>
-            <td  ><button (click)="updateEductionDetails(item)"> Edit</button></td>
+            <td  ><button (click)="updateEductionDetails(item)"> Edit</button>
+                <button (click)="deleteRecord(item.id)"> delete</button></td>
         </tr>
     </table>
 
@@ -52,6 +53,10 @@
             <label for="University">University</label>
             <input class="form-control" name="University" formControlName="University" >
         </div>
+        <div [hidden]="educationDetails.controls['University'].valid && (educationDetails.controls['University'].dirty || educationDetails.controls['University'].touched || educationDetails.controls['University'].pristine)" class="alert alert-danger">
+            university details is required
+            
+        </div>
         <div>
             <label for="Duration">Duration</label>
             <input class="form-control" name="Duration" formControlName="Duration"  >
@@ -66,7 +71,7 @@
          -->
         
         
-        <button (click)="submitEductionDetails()">Submit</button>
+        <button  [style.padding]="buttonpadding" (click)="submitEductionDetails()">Submit</button>
 
     </form>
 
@@ -86,5 +91,24 @@
     </div>
 </div>
 
+</div>
+
+<div >User Detais
+    <form [formGroup]="userDetails">
+        <div>
+            <label for="Name">UserName</label>
+            <input class="form-control" name="Name" formControlName="userName" >
+        </div>
+        <div>
+            <label >name</label>
+            <input class="form-control" name="name" formControlName="name"  >
+        </div>
+        <div>
+            <label >Password</label>
+            <input class="form-control" name="password" formControlName="password"  >
+        </div>
+
+    </form>
+    <button (click)="SubmitUserDetails()"> Submit</button>
 </div>
 

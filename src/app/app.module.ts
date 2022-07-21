@@ -7,12 +7,16 @@ import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { ComponentFundamentalsModule } from './component-fundamentals/component-fundamentals.module';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
+import { TestInterceptorService } from 'src/app/Interceptors/test-interceptor.service'
+import { HttpInterceptorService } from './Interceptors/http-interceptor.service';
+import { MessageComponent } from './message/message.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LifecycleComponent
+    LifecycleComponent,
+    MessageComponent
     
     
   ],
@@ -21,9 +25,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     AppRoutingModule,
     ComponentFundamentalsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: HttpInterceptorService, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: TestInterceptorService, multi: true }
+  
+  ],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

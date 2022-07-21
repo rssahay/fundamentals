@@ -1,6 +1,6 @@
 <p>structural-directives works!</p>
 
-<!-- <table>
+<table>
     <tr>
         <th>
             Firstname
@@ -11,4 +11,16 @@
     </tr>
     <div *ngFor="let item of studentDetails"></div>
     <tr ></tr>
-</table> -->
+</table>
+
+
+<div *ngIf="friday ; else elseblock ">
+    <span></span>
+  Today is friday
+  </div>
+  
+  <ng-template #elseblock>
+    <div >
+      today is not friday
+    </div>
+  </ng-template> 

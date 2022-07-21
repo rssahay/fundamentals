@@ -9,7 +9,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class ChildTrainingComponent implements OnInit {
 
   //alias
-@Input() messagefromParent :any
+@Input() childlisten :any
 
 @Input()studentDetails:any
 
@@ -33,6 +33,8 @@ userInfo={}
 
   ngOnInit(): void {
 
+    console.log("i got the messge from parent ",this.childlisten)
+
     this.myStyle={
       'background-color' : (this.day == 'friday') ? 'yellow' : 'blue'
     }
@@ -51,7 +53,30 @@ userInfo={}
   }
 
   passDataToParent(){
-    this.childmessageEvent.emit("Hello From child component");
+  let   Objectname :any = [{
+      //key : value
+      Firstname : 'akshay',
+      lastname : 'kumar',
+      address : 'pune',
+      mobilenumber : 489658
+    },
+    {
+      //key : value
+      Firstname : 'Amol',
+      lastname : 'bharate',
+      address : 'pune',
+      mobilenumber : 489688899
+    },
+    {
+      //key : value
+      Firstname : 'sujit',
+      lastname : 'taktode',
+      address : 'pune',
+      mobilenumber : 489688899
+    }]
+    
+    
+    this.childmessageEvent.emit(Objectname);
   }
 
 }

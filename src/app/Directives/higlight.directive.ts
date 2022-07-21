@@ -5,20 +5,20 @@ import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 })
 export class HiglightDirective {
 
-  @Input() appHiglight = '';
+ // @Input() appHiglight = '';
 
   constructor(private el:ElementRef) {
-   // this.el.nativeElement.style.backgroundColor = 'yellow'
- //  this.el.nativeElement.style.backgroundColor = 'yellow';
+   this.el.nativeElement.style.backgroundColor = 'yellow'
+ // this.el.nativeElement.style.backgroundColor = 'yellow';
    }
 
    @HostListener('mouseenter') onMouseEnter(){
-    this.highlight(this.appHiglight || 'violet')
+    this.highlight('violet')
    }
 
    @HostListener('mouseleave') onMouseLeave(){
-     this.highlight('yellow')
-   }
+     this.highlight('red')
+  }
 
    highlight(color :any){
     this.el.nativeElement.style.backgroundColor = color

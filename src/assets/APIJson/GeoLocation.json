@@ -1,0 +1,72 @@
+{
+	"data": [{
+		"id": 3386644,
+		"wikiDataId": "Q3694483",
+		"name": "Ab Band District",
+		"country": "Afghanistan",
+		"countryCode": "AF",
+		"region": "Ghazni",
+		"regionCode": "GHA",
+		"latitude": 32.983,
+		"longitude": 67.967,
+		"population": 0
+	}, {
+		"id": 3228129,
+		"wikiDataId": "Q1650529",
+		"name": "Achin",
+		"country": "Afghanistan",
+		"countryCode": "AF",
+		"region": "Nangarhar",
+		"regionCode": "NAN",
+		"latitude": 34.0894,
+		"longitude": 70.683,
+		"population": 0
+	}, {
+		"id": 3223788,
+		"wikiDataId": "Q2674014",
+		"name": "Ajristan District",
+		"country": "Afghanistan",
+		"countryCode": "AF",
+		"region": "Ghazni",
+		"regionCode": "GHA",
+		"latitude": 33.466962,
+		"longitude": 67.238846,
+		"population": 0
+	}, {
+		"id": 3382471,
+		"wikiDataId": "Q2830672",
+		"name": "Alasay",
+		"country": "Afghanistan",
+		"countryCode": "AF",
+		"region": "Kapisa",
+		"regionCode": "KAP",
+		"latitude": 34.925555555,
+		"longitude": 69.809166666,
+		"population": 0
+	}, {
+		"id": 3348637,
+		"wikiDataId": "Q1229725",
+		"name": "Alingar",
+		"country": "Afghanistan",
+		"countryCode": "AF",
+		"region": "Laghman",
+		"regionCode": "LAG",
+		"latitude": 34.8347,
+		"longitude": 70.3603,
+		"population": 0
+	}],
+	"links": [{
+		"rel": "first",
+		"href": "/v1/geo/cities?offset=0&limit=5"
+	}, {
+		"rel": "next",
+		"href": "/v1/geo/cities?offset=5&limit=5"
+	}, {
+		"rel": "last",
+		"href": "/v1/geo/cities?offset=68820&limit=5"
+	}],
+	"metadata": {
+		"currentOffset": 0,
+		"totalCount": 68823
+	}
+}

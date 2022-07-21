@@ -14,6 +14,12 @@ import { MyhighlighterDirective } from '../Directives/myhighlighter.directive';
 import { FormsComponent } from './forms/forms.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReactiveFormsExampleComponent } from './reactive-forms-example/reactive-forms-example.component';
+import { ListofMoviesComponent } from './listof-movies/listof-movies.component';
+import { ListofHerosComponent } from './listof-heros/listof-heros.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { RxjsFundamentalsComponent } from './rxjs-fundamentals/rxjs-fundamentals.component';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
+import { LifecyclechildComponent } from './lifecycle/lifecyclechild/lifecyclechild.component';
 
 
 @NgModule({
@@ -27,7 +33,13 @@ import { ReactiveFormsExampleComponent } from './reactive-forms-example/reactive
     HiglightDirective,
     MyhighlighterDirective,
     FormsComponent,
-    ReactiveFormsExampleComponent
+    ReactiveFormsExampleComponent,
+    ListofMoviesComponent,
+    ListofHerosComponent,
+    PagenotfoundComponent,
+    RxjsFundamentalsComponent,
+    LifecycleComponent,
+    LifecyclechildComponent
 
   ],
   imports: [
@@ -46,6 +58,8 @@ import { ReactiveFormsExampleComponent } from './reactive-forms-example/reactive
     ,
     ReactiveFormsExampleComponent,
     ChildTrainingComponent],
+
+    providers: [],
 
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

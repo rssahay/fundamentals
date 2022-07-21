@@ -1,0 +1,25 @@
+<p>listof-heros works!</p>
+
+<table>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Mobile</th>
+        <th>Location</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let hero of heroDetails">
+        <td>{{hero.Firstname}}</td>
+        <td>{{hero.lastname}}</td>
+        <td>{{hero.mobilenumber}}</td>
+        <td>{{hero.address}}</td>
+        <!-- <td><button [routerLink]="['/listofMovies']" [state]=hero  > Show details</button></td> -->
+    <td><button (click)="showDetails(hero)">Details</button></td>
+    </tr>
+</table>
+
+
+<span>Student name - {{studentName}}</span>
+<br>
+
+<span> Data - {{myData}}</span>

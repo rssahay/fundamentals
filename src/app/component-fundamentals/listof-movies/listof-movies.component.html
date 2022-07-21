@@ -1,0 +1,24 @@
+<p>listof-movies works!</p>
+
+<button (click)="getlocationData()">Show Info</button>
+
+<table *ngIf="isshowTable">
+    <tr>
+        <th>CountryCode</th>
+        <th>Country</th>
+        <th>Name</th>
+        <th>region</th>
+    </tr>
+    <tr *ngFor="let item of geoLoactions">
+        <td>{{item?.countryCode}}</td>
+        <td>{{item?.country}}</td>
+        <td>{{item?.name}}</td>
+        <td>{{item?.region}}</td>
+    </tr>
+
+</table>
+
+
+<div>{{data}}</div>
+
+

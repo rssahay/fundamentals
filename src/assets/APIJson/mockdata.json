@@ -1,0 +1,16 @@
+{
+    "heroesUrl": "api/heroes",
+    "textfile": "assets/textfile.txt",
+    "date": "2020-01-29",
+    "Course" :[{
+        "CourseName" :"Angular",
+        "BatchSTartDate" : "2020-01-29"
+        
+    },{
+        "CourseName" :"Java",
+        "BatchSTartDate" : "2020-01-29"
+
+    }]
+
+
+}

@@ -5,14 +5,35 @@
 <!-- <app-structural-directives></app-structural-directives> -->
 
 <!-- <app-parent></app-parent> -->
-<!-- 
-<div appHiglight> hkfdfh;sohfofh;er</div>
 
-<app-parent-training></app-parent-training> -->
+<!-- <div appHiglight> Highlight this text</div> -->
+
+<!-- <app-parent-training></app-parent-training>  -->
+
+<nav>
+  <ul>
+    <li><a routerLink="/childview" > Child </a></li>
+    <li><a routerLink="/reactive"> Reactive Forms</a></li>
+    <li><a routerLink="/listofHeros"> list of heros</a></li>
+    <li><a routerLink="/listofMovies"> list of movies</a></li>
+    <li><a [routerLink]="['/rxjs', {name: 'xyz'}]"> RxJS</a></li>
+    <li><a routerLink="/lifecycle">Lifecycle</a></li>
+    
+  </ul>
+</nav>
+
+
+
+
+<!-- <div>
+  It will always display
+</div> -->
+<router-outlet></router-outlet>
+
 
 <!-- <app-forms></app-forms> -->
 
-<app-reactive-forms-example></app-reactive-forms-example>
+<!-- <app-reactive-forms-example></app-reactive-forms-example> -->
 
 <!-- <app-reactiveforms-example></app-reactiveforms-example> -->
 

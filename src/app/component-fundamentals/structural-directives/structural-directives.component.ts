@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StructuralDirectivesComponent implements OnInit {
 
-  
+  friday   =  false
+
 studentDetails = [{
   //key : value
   Firstname : 'akshay',

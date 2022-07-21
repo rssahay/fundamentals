@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParentTrainingComponent implements OnInit {
 
-  messagefromParent= 45689663
+  parentmessage= 45689663
 
   displaymessage ='';
 
@@ -44,6 +44,10 @@ export class ParentTrainingComponent implements OnInit {
 
   listenTochild(event:any){
     this.displaymessage = event
+
+    console.log("message from child ", event)
+
+    
   }
 
 }
