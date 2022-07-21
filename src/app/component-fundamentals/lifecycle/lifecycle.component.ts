@@ -18,7 +18,7 @@ OnDestroy {
   displayChild: boolean = false;
 
   constructor() {
-    console.log("AppComponent: Constructor");
+    console.log("LifecycleComponent: Constructor");
   }
 
   toggle() {
@@ -26,35 +26,35 @@ OnDestroy {
   }
 
   ngOnChanges() {
-    console.log("AppComponent: OnChanges");
+    console.log("LifecycleComponent: OnChanges");
   }
 
   ngOnInit() {
-    console.log("AppComponent: OnInit");
+    console.log("LifecycleComponent: OnInit");
   }
 
   ngDoCheck() {
-    console.log("AppComponent: DoCheck");
+    console.log("LifecycleComponent: DoCheck");
   }
 
   ngAfterContentInit() {
-    console.log("AppComponent: AfterContentInit");
+    console.log("LifecycleComponent: AfterContentInit");
   }
 
   ngAfterContentChecked() {
-  console.log("AppComponent:AfterContentChecked");
+  console.log("LifecycleComponent:AfterContentChecked");
   }
 
   ngAfterViewInit() {
-  console.log("AppComponent:AfterViewInit");
+  console.log("LifecycleComponent:AfterViewInit");
   }
 
   ngAfterViewChecked() {
-    console.log("AppComponent:AfterViewChecked");
+    console.log("LifecycleComponent:AfterViewChecked");
   }
 
   ngOnDestroy() {
-    console.log("AppComponent:OnDestroy");
+    console.log("LifecycleComponentcheck:OnDestroy");
   }
 
 }
