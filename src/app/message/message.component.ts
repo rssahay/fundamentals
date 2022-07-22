@@ -12,12 +12,12 @@ export class MessageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-    canExit(): boolean  {
-      if (confirm("Do you wish to Please confirm")) {
-          return true
-        } else {
-          return false
-        }
+  canExit(): boolean {
+    if (confirm("Do you wish to Please confirm")) {
+      return true
+    } else {
+      return false
+    }
   }
 
 }
