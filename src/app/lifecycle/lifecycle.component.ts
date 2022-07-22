@@ -22,7 +22,7 @@ export class LifecycleComponent implements OnInit {
     this.enablebutton = false
     this.studenDetails = [{
       //key : value
-      Firstname : 'akshay',
+      Firstname : 'Rahul',
       lastname : 'kumar',
       address : 'pune',
       mobilenumber : 489658
